@@ -29,10 +29,10 @@ if( ! $themeVersion )
 	$themeVersion = '';
 
 $themeName = str_replace( ' ', '', $themeName );
-$sp_text_domain = 'swantheme';
+$sp_text_domain = 'monkeyarts';
 
 //Basic constants	
-define( 'SP_THEME_NAME', 'SWAN' );
+define( 'SP_THEME_NAME', 'M-Arts' );
 define( 'SP_TEXT_DOMAIN', $sp_text_domain );
 define( 'SP_THEME_VERSION',   $themeVersion );	
 define( 'SP_SCRIPTS_VERSION', '20130914' ); // yyyymmdd
@@ -46,12 +46,13 @@ define( 'SP_ASSETS_ADMIN', get_template_directory_uri() . '/library/assets/' );
 //Custom post WordPress admin menu position - 30, 33, 39, 42, 45, 48
 if ( ! isset( $cp_menu_position ) )
 	$cp_menu_position = array(
-			'portfolio'		=> 30
+			'slideshow'		=> 30,
+			'portfolio'		=> 33
 		);
 
 
 //Theme settings
-//require_once( SP_BASE_DIR . 'library/functions/setup-theme.php' );
+require_once( SP_BASE_DIR . 'library/functions/setup-theme.php' );
 //require_once( SP_BASE_DIR . 'library/functions/theme-functions.php');
 //require_once( SP_BASE_DIR . 'library/functions/aq_resizer.php');
 
@@ -59,7 +60,7 @@ if ( ! isset( $cp_menu_position ) )
 //require_once( SP_BASE_DIR . 'library/shortcode/shortcodes.php');
 
 //Custom post type
-//require_once( SP_BASE_DIR . 'library/custom-posts/custom-posts.php' );
+require_once( SP_BASE_DIR . 'library/custom-posts/custom-posts.php' );
 
 // Add metaboxes
 //require_once( SP_BASE_DIR . 'library/meta-box/meta-box.php' );
