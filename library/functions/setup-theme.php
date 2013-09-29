@@ -62,7 +62,7 @@ function sp_theme_setup() {
 	// Add custom image sizes
 	add_image_size('blog-post-thumb', 270);
 	add_image_size('blog-post-detail', 380);
-	add_image_size('portfolio-thumb', 300, 150, TRUE);
+	add_image_size('portfolio-thumb', 300, 200, TRUE);
 	add_image_size('portfolio-media', 940);
 	add_image_size( 'slideshow', 1350, 800, true );
 	//add_image_size( 'slideshow', 1710, 1015, true );
@@ -100,6 +100,8 @@ function sp_print_scripts_styles() {
 		wp_enqueue_script("modernizr", SP_ASSETS_THEME."/js/modernizr-2.6.2.min.js",array(),false,true);
 		wp_enqueue_script("bxslider", SP_ASSETS_THEME."/js/jquery.bxslider.min.js",array(),false,true);
 		wp_enqueue_script("tiny-scrollbar", SP_ASSETS_THEME."/js/jquery.tinyscrollbar.min.js",array(),false,true);
+		wp_enqueue_script("isotope", SP_ASSETS_THEME."/js/jquery.isotope.min.js",array(),false,true);
+		wp_enqueue_script("ba-bbq", SP_ASSETS_THEME."/js/jquery.ba-bbq.min.js",array(),false,true);
 		if ( $is_IE ) {
 			wp_enqueue_script("html5", SP_ASSETS_THEME."/js/html5.js",array(),false,false);
 		}

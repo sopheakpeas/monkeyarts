@@ -85,6 +85,15 @@
  * custom.js
  * Custom JS code required by the theme.
  */
+ 
+function load_images(attr)
+{
+	jQuery('img').each(function()
+	{
+		if( jQuery(this).data(attr) )
+			jQuery(this).attr('src', jQuery(this).data(attr));
+	});
+} 
 
 jQuery( function($) {
 
@@ -187,5 +196,8 @@ jQuery( document ).ready( function($) {
 	
 	// Content scrollbar
 	$('#scrollbar1').tinyscrollbar();
+	
+	//Portfolio
+	load_images('src');
 																																	  
 } )
