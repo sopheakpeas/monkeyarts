@@ -171,6 +171,21 @@ jQuery( document ).ready( function($) {
 	});
 	
 	// Single post slideshow with Flexslider
-	$('#flexslider-post').flexslider();
+	//$('#flexslider-post').flexslider();
+	
+	// Bxslider for homepage
+	$('.slideshow .bxslider').bxSlider({
+	  mode: 'fade',
+	  captions: true,
+	  pager: false,
+	  captions: true,
+	  auto:true,
+	  autoHover: true,
+	  pause:5000,
+	  speed:4000
+	});
+	
+	// Content scrollbar
+	$('#scrollbar1').tinyscrollbar();
 																																	  
 } )

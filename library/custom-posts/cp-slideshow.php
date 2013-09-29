@@ -46,7 +46,7 @@
 
 			$role     = 'post'; // page
 			$slug     = 'slideshow';
-			$supports = array('title', 'thumbnail', 'editor'); // 'title', 'editor', 'thumbnail'
+			$supports = array('title', 'thumbnail'); // 'title', 'editor', 'thumbnail'
 
 			/*if ( $smof_data['sp_newsticker_revisions'] )
 				$supports[] = 'revisions';*/
@@ -66,14 +66,14 @@
 				'labels'              => array(
 					'name'               => __( 'Slideshow', 'sptheme_admin' ),
 					'singular_name'      => __( 'Slideshow', 'sptheme_admin' ),
-					'add_new'            => __( 'Add new slideshow', 'sptheme_admin' ),
-					'add_new_item'       => __( 'Add new slideshow', 'sptheme_admin' ),
-					'new_item'           => __( 'Add new slideshow', 'sptheme_admin' ),
-					'edit_item'          => __( 'Edit slideshow', 'sptheme_admin' ),
-					'view_item'          => __( 'View slideshow', 'sptheme_admin' ),
-					'search_items'       => __( 'Search slideshow', 'sptheme_admin' ),
-					'not_found'          => __( 'No slideshow found', 'sptheme_admin' ),
-					'not_found_in_trash' => __( 'No slideshow found in trash', 'sptheme_admin' ),
+					'add_new'            => __( 'Add new slide', 'sptheme_admin' ),
+					'add_new_item'       => __( 'Add new slide', 'sptheme_admin' ),
+					'new_item'           => __( 'Add new slide', 'sptheme_admin' ),
+					'edit_item'          => __( 'Edit slide', 'sptheme_admin' ),
+					'view_item'          => __( 'View slide', 'sptheme_admin' ),
+					'search_items'       => __( 'Search slide', 'sptheme_admin' ),
+					'not_found'          => __( 'No slide found', 'sptheme_admin' ),
+					'not_found_in_trash' => __( 'No slide found in trash', 'sptheme_admin' ),
 					'parent_item_colon'  => ''
 				)
 			);

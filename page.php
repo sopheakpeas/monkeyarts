@@ -4,26 +4,31 @@
  */
 
 get_header(); ?>
-
-<?php get_template_part( 'includes/heading-subpage' ); ?>
-
-<div id="content">
-    <div class="container clearfix">
-
+	
+    <?php get_sidebar(); ?>
+    
     <div id="main" role="main">
 		<?php
         if ( have_posts() ) :
 			while ( have_posts() ) :
 			the_post(); ?>
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<header class="entry-header">
-				<h1 class="entry-title"><?php the_title(); ?></h1>
-			</header>
-				<div class="entry-content">
-					<?php the_content(); ?>
-					<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', SP_TEXT_DOMAIN ), 'after' => '</div>' ) ); ?>
-				</div><!-- .entry-content -->
-			</article><!-- #post -->
+            <div id="scrollbar1">
+            <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+            <div class="viewport">
+                <div class="overview">
+                
+                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                <header class="entry-header">
+                    <h1 class="entry-title"><?php the_title(); ?></h1>
+                </header>
+                    <div class="entry-content">
+                        <?php the_content(); ?>
+                    </div><!-- .entry-content -->
+                </article><!-- #post -->
+                
+                 </div><!-- .overview -->
+                </div><!-- .viewport -->
+            </div><!-- #scrollbar1 -->
 		<?php endwhile;
         else : ?>
 			<article id="post-0" class="post no-results not-found">
@@ -36,8 +41,5 @@ get_header(); ?>
 			</div><!-- .entry-content -->
 			</article><!-- #post-0 -->
         <?php endif; ?>
-    </div><!-- #main -->    
-<?php get_sidebar(); ?>
-	</div><!-- .container .clearfix -->   
-</div><!-- #content -->
+    </div><!-- #main --> 
 <?php get_footer(); ?>

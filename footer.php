@@ -14,7 +14,11 @@ global $smof_data ?>
     	
     <div class="container clearfix">
     
-        <p class="copyright"><?php echo stripslashes($smof_data['footer_text']); ?></p>
+        <p class="copyright">
+        <?php if($smof_data['footer_text']) : 
+       		echo $smof_data['footer_text']; 
+        endif; ?>
+        </p>
        
     </div><!-- .container -->
 </footer><!-- #footer -->

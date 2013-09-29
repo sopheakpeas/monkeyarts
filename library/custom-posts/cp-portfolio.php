@@ -46,7 +46,7 @@
 
 			$role     = 'post'; // page
 			$slug     = 'portfolio';
-			$supports = array('title', 'thumbnail', 'editor'); // 'title', 'editor', 'thumbnail'
+			$supports = array('title', 'thumbnail'); // 'title', 'editor', 'thumbnail'
 
 			/*if ( $smof_data['sp_newsticker_revisions'] )
 				$supports[] = 'revisions';*/
@@ -56,7 +56,7 @@
 				'capability_type'     => $role,
 				'public'              => true,
 				'show_ui'             => true,
-				'show_in_nav_menus'	  => false,
+				'show_in_nav_menus'	  => true,
 				'exclude_from_search' => false,
 				'hierarchical'        => false,
 				'rewrite'             => array( 'slug' => $slug ),
@@ -66,14 +66,14 @@
 				'labels'              => array(
 					'name'               => __( 'Portfolio', 'sptheme_admin' ),
 					'singular_name'      => __( 'Portfolio', 'sptheme_admin' ),
-					'add_new'            => __( 'Add new photo', 'sptheme_admin' ),
-					'add_new_item'       => __( 'Add new photo', 'sptheme_admin' ),
-					'new_item'           => __( 'Add new photo', 'sptheme_admin' ),
-					'edit_item'          => __( 'Edit photo', 'sptheme_admin' ),
-					'view_item'          => __( 'View photo', 'sptheme_admin' ),
-					'search_items'       => __( 'Search photo', 'sptheme_admin' ),
-					'not_found'          => __( 'No photo found', 'sptheme_admin' ),
-					'not_found_in_trash' => __( 'No photo found in trash', 'sptheme_admin' ),
+					'add_new'            => __( 'Add new album', 'sptheme_admin' ),
+					'add_new_item'       => __( 'Add new album', 'sptheme_admin' ),
+					'new_item'           => __( 'Add new album', 'sptheme_admin' ),
+					'edit_item'          => __( 'Edit album', 'sptheme_admin' ),
+					'view_item'          => __( 'View album', 'sptheme_admin' ),
+					'search_items'       => __( 'Search album', 'sptheme_admin' ),
+					'not_found'          => __( 'No album found', 'sptheme_admin' ),
+					'not_found_in_trash' => __( 'No album found in trash', 'sptheme_admin' ),
 					'parent_item_colon'  => ''
 				)
 			);

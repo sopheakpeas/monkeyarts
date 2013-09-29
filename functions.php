@@ -63,11 +63,11 @@ require_once( SP_BASE_DIR . 'library/functions/theme-functions.php');
 require_once( SP_BASE_DIR . 'library/custom-posts/custom-posts.php' );
 
 // Add metaboxes
-//require_once( SP_BASE_DIR . 'library/meta-box/meta-box.php' );
-//require_once( SP_BASE_DIR . 'library/meta-box/meta-options.php' );
+require_once( SP_BASE_DIR . 'library/meta-box/meta-box.php' );
+require_once( SP_BASE_DIR . 'library/meta-box/meta-options.php' );
 
 //Admin Options
-//require_once( SP_BASE_DIR . 'library/admin/index.php' );
+require_once( SP_BASE_DIR . 'library/admin/index.php' );
 
 //Widget and Sidebar
 //require_once( SP_BASE_DIR . 'library/widgets/widgets.php' );

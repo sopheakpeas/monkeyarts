@@ -5,7 +5,7 @@ require_once( SP_BASE_DIR . 'library/custom-posts/cp-slideshow.php' );
 require_once( SP_BASE_DIR . 'library/custom-posts/cp-portfolio.php' );
 
 //Taxonomies
-require_once( SP_BASE_DIR . 'library/custom-posts/ct-taxonomies.php' );
+//require_once( SP_BASE_DIR . 'library/custom-posts/ct-taxonomies.php' );
 	
 /*==========================================================================*/
 
@@ -20,7 +20,7 @@ if ( ! function_exists( 'sp_change_new_post_title' ) ) {
 	function sp_change_new_post_title( $title ){
 		$screen = get_current_screen();
 
-		if ( 'sp_portfolio' == $screen->post_type )
+		if ( 'portfolio' == $screen->post_type )
 			$title = __( "Portfolio title", 'sptheme_admin' );
 
 		/*if ( 'sp_faq' == $screen->post_type )
