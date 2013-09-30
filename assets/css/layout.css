@@ -1,16 +1,3 @@
-/* Load icon font files
- * http://fortawesome.github.com/Font-Awesome
- */
-@font-face {
-	font-family: 'FontAwesome';
-	src: url('font/awesome/fontawesome-webfont.eot');
-	src: url('font/awesome/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
-	url('font/awesome/fontawesome-webfont.woff') format('woff'),
-	url('font/awesome/fontawesome-webfont.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-
 /* ---------------------------------------------------------------
  * STRUCTURE
  * Site layout
@@ -72,6 +59,11 @@
 		margin:0;	
 	}
 	
+	/* -------------------------------------------------- */
+	/*	Lightwindow
+	/* -------------------------------------------------- */
+	#lightwindow{position:absolute;top:0;left:0;right:0;background:#fff;background:rgba(255,255,255,0.95);z-index:9999;display:none;}
+	#lightwindow-content{display:none;}
 	
 /* ---------------------------------------------------------------
  * NAVIGATION
@@ -82,7 +74,7 @@
 	/* -------------------------------------------------- */
 	.nav-menu{height:auto; list-style:none; margin-bottom:0px; padding-left:0;}
 	.nav-menu li{position:relative;display:block; width:100%; margin-bottom:8px;}
-	.nav-menu li a{height:14px;display:block;background:none; color:#ca3c08;}
+	.nav-menu li a{height:14px;display:block;background:none;}
 	
 	.nav-menu li a.active {color:#ff6600;}
 
@@ -92,7 +84,7 @@
  
 	.nav-menu ul{left:-9999px; margin-bottom:10px; margin-top:10px; display:none; padding-left:15px;}
 	.nav-menu ul li{line-height:20px;margin-bottom:5px;}
-	.nav-menu ul a{white-space:nowrap;display:block; font-size:15px; color:#bf5d3d;}
+	.nav-menu ul a{white-space:nowrap;display:block; font-size:15px; color:#a2806d;}
 	
 	.nav-menu li a:hover,
 	.nav-menu li a.active {color:#ff3333; text-decoration:none;}	
@@ -302,10 +294,7 @@
  * CUSTOM WIDGET
  * All custom widget elements
  * ------------------------------------------------------------ */
-.widget .post-thumbnail{
-	float: left;
-	margin-right: .8em;
-}
+ 
 	/* -------------------------------------------------- */
 	/*	Widget calendar work with table css in base.css
 	/* -------------------------------------------------- */	
@@ -319,38 +308,6 @@
 	.sp-widget-category-posts p{
 		margin: 0;
 	}
-	
-	/* -------------------------------------------------- */
-	/*	Testimonials widget
-	/* -------------------------------------------------- */
-	.testimonial-content{
-		background-color: #1D1D2F;
-		padding: 2em 1.5em;
-		color: #fff;
-	}
-	.content-tail{
-		border-left: 16px solid transparent;
-	    border-right: 16px solid transparent;
-	    border-top: 40px solid #1D1D2F;
-	    height: 0;
-	    width: 0;
-	    margin-left: 4.5em;
-	    margin-top: 0;
-	    position: absolute;
-	    -webkit-transform: skew(40deg);
-        	-ms-transform: skew(40deg);
-			 -o-transform: skew(40deg);
-			 	transform: skew(40deg);
-	    
-	}
-	.testimonial-info{
-		margin: 2.5em 0 2.5em 7.5em;
-	}
-	.testimonial-info h5{
-		font-size: 1em;
-	}
-	
-	.widget-footer .testimonial-info h5{color:#fff;}
 	
 	/* -------------------------------------------------- */
 	/*	Social Icons Widget
@@ -412,6 +369,13 @@ h1.entry-title, .section-title h3{
 	font-size: 2em;
 	line-height: 1.375;
 	margin: 0 0 0.5em;
+}
+
+.entry-content a{
+	text-decoration:underline;
+}
+.entry-content a:hover{
+	text-decoration:none;
 }
 
 /* Post Meta */
@@ -542,6 +506,12 @@ a.rss-cat-icon{
 	float: left;
 	margin: 7px;
 }
+.portfolio a{
+	opacity:1;
+}
+	.portfolio a:hover{
+		opacity:0.7;	
+	}
 .portfolio .small {
 	width: 300px;
 	height: 200px;
@@ -557,7 +527,6 @@ a.rss-cat-icon{
  * ------------------------------------------------------------ */
 
 #footer {
-	color: #666666;
 	position:fixed;
 	bottom:1.5%;
 	right:2.6%;
@@ -757,9 +726,9 @@ a.rss-cat-icon{
 #scrollbar1 .viewport { width: 85.3%; height: 350px; overflow: hidden; position: relative; }
 #scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0; }
 #scrollbar1 .scrollbar{ background-color:#c9c9c9 ; position: relative; float: right; width: 6px; }
-#scrollbar1 .track { background-color:#c9c9c9 ; height: 100%; width:6px; position: relative; }
-#scrollbar1 .thumb { background-color:#656565; height: 20px; width: 6px; cursor: pointer; overflow: hidden; position: absolute; top: 0; left: 0; }
-#scrollbar1 .thumb .end { background-color:#656565; overflow: hidden; height: 5px; width: 6px; }
+#scrollbar1 .track { background-color:#c9c9c9; height: 100%; width:6px; position: relative; }
+#scrollbar1 .thumb { background-color:#80573d; height: 20px; width: 6px; cursor: pointer; overflow: hidden; position: absolute; top: 0; left: 0; }
+#scrollbar1 .thumb .end { background-color:#80573d; overflow: hidden; height: 5px; width: 6px; }
 #scrollbar1 .disable { display: none; }
 .noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }	
 	

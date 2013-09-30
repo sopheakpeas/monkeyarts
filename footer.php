@@ -22,6 +22,11 @@ global $smof_data ?>
        
     </div><!-- .container -->
 </footer><!-- #footer -->
+
+<div id="lightwindow">
+    <div id="lightwindow-content"></div>
+</div>
+
 <?php wp_footer(); ?>
 </body>
 </html>

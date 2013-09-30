@@ -62,7 +62,7 @@ body {
 	font-size: 1em;
 	line-height: 1.5;
 	font-family: 'Rokkitt', serif; 
-	color: #bf5d3d; /*#BC360A;*/
+	color: #a2806d; /*#bf5d3d; #BC360A;*/
 	font-weight:400;
 	background: #F8F7F5;
 	-webkit-text-size-adjust: 1em; /* 2 */
@@ -85,7 +85,7 @@ h6 { font-size: 1em; }
 h1,h2,h3,h4,h5,h6{ margin-bottom: 0.3em; margin-top: 0; font-weight:500; }
 /* Link */
 a, a > * {
-	color: #CA3C08;
+	color: #80573d;
 	text-decoration: none;
 	-webkit-transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
 	   -moz-transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
@@ -96,29 +96,10 @@ a, a > * {
 
 a:hover, a > *:hover { color: #ff3333; text-decoration: underline; }
 
-
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
-	color: #CA3C08;
-	text-decoration: none;
-}
-
-/*h1 a:hover,
-h2 a:hover,
-h3 a:hover,
-h4 a:hover,
-h5 a:hover {
-	color: #000;
-}
-*/
-
 /* Text elements */
 
 p {
+	margin-top:0;
 	margin-bottom: 1.5em;
 }
 

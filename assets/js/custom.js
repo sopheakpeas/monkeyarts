@@ -198,6 +198,24 @@ jQuery( document ).ready( function($) {
 	$('#scrollbar1').tinyscrollbar();
 	
 	//Portfolio
-	load_images('src');
+	$(document).on('click', '.lightwindow', function(event){
+
+		file = $(this).attr('href');
+		
+		$.ajax({
+  			url: file,
+		}).done(function(data) {
+
+			position = $(document).scrollTop();
+			$('#lightwindow').css({'height' : $(document).height() });
+			$('#lightwindow-content').html(data).css({'margin-top' : (position+50)});
+			$('#lightwindow').show('fade', function() {
+				$("a[rel^='lightwindow']").prettyPhoto({deeplinking:false});
+				$('#lightwindow-content').show('fade');
+			});
+		});
+
+		return false;
+	});
 																																	  
 } )

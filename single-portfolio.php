@@ -2,8 +2,15 @@
 /**
  * The template for displaying all pages.
  */
-
-get_header(); ?>
+if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+    define('WP_USE_THEMES', false);  
+    require_once('../../../wp-load.php');
+}
+else
+{
+	get_header(); 
+}
+?>
 	
     <?php get_sidebar(); ?>
     <div id="main" role="main">
@@ -17,8 +24,8 @@ get_header(); ?>
             	<ul>
 			<?php foreach ( $heading_img as $image ){ ?>
                 	<li class="all">
-                        <a href="#">
-                        <img src="#" data-src="<?php echo $image['url']; ?>" alt="" class="small">
+                        <a href="<?php echo $image['full_url']?>" rel="prettyPhoto[pp_gal]">
+                        <img src="<?php echo $image['url']; ?>" class="small">
                         </a>
                     </li>
             <?php
@@ -30,4 +37,10 @@ get_header(); ?>
             </div><!-- .entry-content -->
 		
     </div><!-- #main -->    
-<?php get_footer(); ?>
+<?php 
+if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+
+}else{
+    get_footer();
+}
+?>
