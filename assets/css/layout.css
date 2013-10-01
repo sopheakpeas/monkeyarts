@@ -731,6 +731,11 @@ a.rss-cat-icon{
 #scrollbar1 .thumb .end { background-color:#80573d; overflow: hidden; height: 5px; width: 6px; }
 #scrollbar1 .disable { display: none; }
 .noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }	
+
+/*Spinner Style*/
+.spinner{
+	background-position:center center;	
+}
 	
 /* ---------------------------------------------------------------
  * MEDIA QUERY

@@ -1,19 +1,13 @@
-<?php
-/**
- * The template for displaying all pages.
- */
-if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
-    define('WP_USE_THEMES', false);  
-    require_once('../../../wp-load.php');
-}
-else
+<?php 
+//Not an AJAX request
+if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']))
 {
-	get_header(); 
+	get_header();
+?>
+	<div id="main" role="main">
+<?php	
 }
 ?>
-	
-    <?php get_sidebar(); ?>
-    <div id="main" role="main">
 			
             <?php $heading_img = rwmb_meta( 'sp_photo_albums', $args = array('type' => 'image_advanced', 'size' => 'portfolio-thumb') ); 
 				
@@ -36,11 +30,11 @@ else
                 </article><!-- #post -->
             </div><!-- .entry-content -->
 		
-    </div><!-- #main -->    
 <?php 
-if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
-
-}else{
-    get_footer();
+if(!isset($_SERVER['HTTP_X_REQUESTED_WITH'])){
+?>
+	</div><!-- #main --> 
+<?php 	
+	get_footer();
 }
 ?>

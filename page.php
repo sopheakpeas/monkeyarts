@@ -1,13 +1,15 @@
-<?php
-/**
- * The template for displaying all pages.
- */
-
-get_header(); ?>
-	
-    <?php get_sidebar(); ?>
+<?php 
+//Not an AJAX request
+if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']))
+{
+	get_header();
+?>
+	<div id="main" role="main">
+<?php	
+}
+?>
     
-    <div id="main" role="main">
+    
 		<?php
         if ( have_posts() ) :
 			while ( have_posts() ) :
@@ -41,5 +43,12 @@ get_header(); ?>
 			</div><!-- .entry-content -->
 			</article><!-- #post-0 -->
         <?php endif; ?>
-    </div><!-- #main --> 
-<?php get_footer(); ?>
+    
+<?php 
+if(!isset($_SERVER['HTTP_X_REQUESTED_WITH'])){
+?>
+	</div><!-- #main --> 
+<?php 	
+	get_footer();
+}
+?>

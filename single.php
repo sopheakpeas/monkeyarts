@@ -4,8 +4,6 @@
  */
 
 get_header(); ?>
-	
-    <?php get_sidebar(); ?>
     
     <div id="main" role="main">
 		<?php

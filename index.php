@@ -4,9 +4,7 @@
  */
 get_header(); ?>
 	
-	<?php get_sidebar(); ?>
-   	
-    <div id="main">
+	<div id="main">
     	
         <!-- slideshow -->
         <div class="slideshow">
