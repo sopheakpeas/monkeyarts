@@ -158,9 +158,8 @@ border-radius: 2px;
 /*menu icons - customize to your liking*/
 #of_container #of-nav li.generalsettings a{ background-image:url(../images/icon-settings.png);}
 #of_container #of-nav li.styleoptions a{ background-image:url(../images/icon-paint.png);}
-#of_container #of-nav li.slideshowsetting a{ background-image:url(../images/icon-slideshow.png);}
-#of_container #of-nav li.homesettings a{ background-image:url(../images/icon-home.png);}
-#of_container #of-nav li.contact a {background: url(../images/icon-map.png) no-repeat;}
+#of_container #of-nav li.homepagesettings a{ background-image:url(../images/icon-home.png);}
+#of_container #of-nav li.socialnetworking a {background: url(../images/icon-social.png) no-repeat;}
 #of_container #of-nav li.footerlayout a {background: url(../images/icon-footer.png) no-repeat;}
 #of_container #of-nav li.backupoptions a {background: url(../images/icon-backup.png) no-repeat;}
 #of_container #of-nav li.advancedsettings a {background: url(../images/wrench16.png) no-repeat;}

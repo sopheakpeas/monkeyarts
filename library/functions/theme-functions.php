@@ -61,17 +61,13 @@ if ( ! function_exists( 'sp_post_meta' ) ) {
 /* ---------------------------------------------------------------------- */
 if ( ! function_exists( 'sp_meta_mini' ) ) :
 	function sp_meta_mini() {
-		printf( __( '<a href="%1$s" title="%2$s"><time class="entry-date" datetime="%3$s">%4$s</time></a>', SP_TEXT_DOMAIN ),
+		printf( __( '<a href="%1$s" title="%2$s"><time class="entry-date" datetime="%3$s">%4$s</time></a><span class="posted-in"> in </span>%5$s ', SP_TEXT_DOMAIN ),
 			esc_url( get_permalink() ),
 			esc_attr( get_the_time() ),
 			esc_attr( get_the_date( 'c' ) ),
-			esc_html( get_the_date() )
-			//get_the_category_list( ', ' )
+			esc_html( get_the_date() ),
+			get_the_category_list( ', ' )
 		);
-		if ( comments_open() ) : ?>
-				<span class="sep"><?php _e( ' | ', SP_TEXT_DOMAIN ); ?></span>
-				<span class="comments-link"><?php comments_popup_link( '<span class="leave-reply">' . __( '0 Comments', SP_TEXT_DOMAIN ) . '</span>', __( '1 Comment', SP_TEXT_DOMAIN ), __( '% Comments', SP_TEXT_DOMAIN ) ); ?></span>
-		<?php endif; // End if comments_open()
 	}
 endif;
 

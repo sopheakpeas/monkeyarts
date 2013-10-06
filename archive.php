@@ -5,8 +5,8 @@
 
 get_header(); ?>
 
-    <div id="main" role="main">
-        <div class="blog-classic">
+    <div id="blog" role="main">
+   		<div class="blog-classic">
         <header class="entry-header tagline clearfix">
 
 			<?php if ( have_posts() ): ?>
@@ -61,8 +61,7 @@ get_header(); ?>
 			</article><!-- end .hentry -->
 
 		<?php endif; ?>
-		</div> <!-- .classic-blog -->		
-        
-    </div><!-- #main -->
-<?php get_sidebar(); ?>
+    </div><!-- .blog-classic -->
+	<?php get_sidebar('blog'); ?>
+</div><!-- #blog -->
 <?php get_footer(); ?>

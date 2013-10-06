@@ -5,28 +5,32 @@
 
 get_header(); ?>
     
-    <div id="main" role="main">
+   <div id="blog" role="main">
+   		<div class="blog-classic">
 		<?php
         if ( have_posts() ) :
 			while ( have_posts() ) :
 			the_post(); ?>
-            <div id="scrollbar1">
-            <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
-            <div class="viewport">
-                <div class="overview">
-                
-                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                <header class="entry-header">
-                    <h1 class="entry-title"><?php the_title(); ?></h1>
-                </header>
-                    <div class="entry-content">
-                        <?php the_content(); ?>
-                    </div><!-- .entry-content -->
-                </article><!-- #post -->
-                
-                 </div><!-- .overview -->
-                </div><!-- .viewport -->
-            </div><!-- #scrollbar1 -->
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<div class="entry-head">
+					<h1 class="entry-title"><?php the_title(); ?></h1>
+					<div class="entry-meta"><?php sp_meta_mini(); ?></div>
+				</div> <!-- .entry-head -->
+				<?php 
+				if( 'video' == get_post_format() )
+                    get_template_part( 'formats/format', 'video' );
+                elseif ( 'gallery' == get_post_format() )
+                    get_template_part( 'formats/format', 'gallery' );
+                elseif ( 'audio' == get_post_format() )
+                    get_template_part( 'formats/format', 'audio' );    
+                else {
+					the_post_thumbnail( 'size_max' ); 
+				}	
+				?>
+				<div class="entry-content">
+					<?php the_content(); ?>
+				</div><!-- .entry-content -->
+			</article><!-- #post -->
 		<?php endwhile;
         else : ?>
 			<article id="post-0" class="post no-results not-found">
@@ -39,5 +43,7 @@ get_header(); ?>
 			</div><!-- .entry-content -->
 			</article><!-- #post-0 -->
         <?php endif; ?>
-    </div><!-- #main --> 
+        </div><!-- .blog-classic -->
+        <?php get_sidebar('blog'); ?>
+    </div><!-- #blog --> 
 <?php get_footer(); ?>

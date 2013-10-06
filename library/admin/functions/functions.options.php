@@ -132,7 +132,7 @@ $of_options[] = array( 	"name" 		=> "Custom Favicon",
 				); 																																																
 				
 // Featured Slider
-$of_options[] = array( "name" => "Slideshow Setting",
+$of_options[] = array( "name" => "Homepage Settings",
 					"type" => "heading");
 					
 $of_options[] = array( "name" => "Effect",
@@ -154,19 +154,103 @@ $of_options[] = array( "name" => "Speed Transistion",
 					"id" => "flex_animation_speed",
 					"std" => "5000",
 					"type" => "text"
-					);				
-				
-// Contact
-$of_options[] = array( "name" => "Contact",
-"type" => "heading");
-	
-$of_options[] = array( "name" => "Email",
-		"desc" => "",
-		"id" => "email",
-		"std" => "info@swanboutiquespa.com",
-		"type" => "text"
-	);	
+					);	
+					
+//Social 
+$of_options[] = array( 	"name" 		=> "Social Networking",
+						"type" 		=> "heading"
+				);
 
+$of_options[] = array( "name" => 'Custom Feed URL',
+					"desc" => "",
+					"id" => "introduction",
+					"std" => "<h3>Custom Feed URL</h3>",
+					"icon" => true,
+					"type" => "info",
+					);
+									
+	$of_options[] = array( "name" => "Hide Rss Icon",
+						"desc" => "Hide rss icon in social widget",
+						"id" => "rss_icon",
+						"std" => 0,
+						"type" => "switch"
+						);
+						
+	$of_options[] = array( "name" => "Custom Feed URL",
+						"desc" => "e.g: http://www.feedburner.com/userid",
+						"id" => "rss_url",
+						"std" => "",
+						"type" => "text"
+						);	
+						
+$of_options[] = array( "name" => 'Social Networking',
+					"desc" => "",
+					"id" => "introduction",
+					"std" => "<h3>Social Networking</h3>",
+					"icon" => true,
+					"type" => "info",
+					);
+
+	$of_options[] = array( "name" => "Facebook URL",
+						"id" => "social_facebook",
+						"std" => "",
+						"type" => "text"
+						);	
+	
+	$of_options[] = array( "name" => "Twitter URL",
+						"id" => "social_twitter",
+						"std" => "",
+						"type" => "text"
+						);
+						
+	$of_options[] = array( "name" => "Google+ URL",
+						"id" => "social_google_plus",
+						"std" => "",
+						"type" => "text"
+						);
+											
+	$of_options[] = array( "name" => "LinkedIn URL",
+						"id" => "social_linkedin",
+						"std" => "",
+						"type" => "text"
+						);
+											
+	$of_options[] = array( "name" => "YouTube URL",
+						"id" => "social_youtube",
+						"std" => "",
+						"type" => "text"
+						);
+											
+	$of_options[] = array( "name" => "Vimeo URL",
+						"id" => "social_vimeo",
+						"std" => "",
+						"type" => "text"
+						);
+											
+	$of_options[] = array( "name" => "Skype URL",
+						"id" => "social_skype",
+						"std" => "",
+						"type" => "text"
+						);
+											
+	$of_options[] = array( "name" => "Delicious URL",
+						"id" => "social_delicious",
+						"std" => "",
+						"type" => "text"
+						);
+											
+	$of_options[] = array( "name" => "Instagram URL",
+						"id" => "social_instagram",
+						"std" => "",
+						"type" => "text"
+						);	
+						
+	$of_options[] = array( "name" => "Pinterest URL",
+						"id" => "social_pinterest",
+						"std" => "",
+						"type" => "text"
+						);								
+				
 //Footer
 $of_options[] = array( "name" => "Footer Layout",
 "type" => "heading"

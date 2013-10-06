@@ -70,4 +70,4 @@ require_once( SP_BASE_DIR . 'library/meta-box/meta-options.php' );
 require_once( SP_BASE_DIR . 'library/admin/index.php' );
 
 //Widget and Sidebar
-//require_once( SP_BASE_DIR . 'library/widgets/widgets.php' );
+require_once( SP_BASE_DIR . 'library/widgets/widgets.php' );

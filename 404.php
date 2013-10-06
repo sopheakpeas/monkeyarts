@@ -4,10 +4,8 @@
  */
 
 get_header(); ?>
-<div id="content">
-    <div class="container clearfix">
-    
-    <div id="main" role="main">
+<div id="blog" role="main">
+   		<div class="blog-classic">
 			<center>
 			<article id="post-0" class="post no-results not-found">
 			<header class="entry-header">
@@ -22,8 +20,7 @@ get_header(); ?>
 			</article><!-- #post-0 -->
 			</center>
 			
-    </div><!-- #main -->
-<?php get_sidebar(); ?>
-</div><!-- .container .clearfix -->   
-</div><!-- #content -->
+    </div><!-- .blog-classic -->
+	<?php get_sidebar('blog'); ?>
+</div><!-- #blog --> 
 <?php get_footer(); ?>

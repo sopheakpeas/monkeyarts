@@ -15,7 +15,7 @@ body {
 	font-size: 1em;
 	line-height: 1.5;
 	font-family: 'Rokkitt', serif;
-	color: #545454;
+	color: #444;
 	font-weight:400;
 	background: #F8F7F5;
 	vertical-align: baseline;
@@ -28,7 +28,7 @@ h3 { font-size: 1.8em; }
 h4 { font-size: 1.4em; }
 h5 { font-size: 1.2em; }
 h6 { font-size: 1em; }
-h1,h2,h3,h4,h5,h6{ margin-bottom: 0.3em; margin-top: 0; font-weight:500; }
+h1,h2,h3,h4,h5,h6{ margin-bottom: 0.3em; margin-top: 0; font-weight:500; color:#996e55; }
 
 /* Links */
 a {
@@ -38,7 +38,7 @@ a {
 }
 
 a:hover {
-	color: #ff3333;
+	color: #ff6600;
 	text-decoration: none;
 }
 

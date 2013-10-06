@@ -5,9 +5,9 @@ div.pp_default .pp_top .pp_right{background:url(../images/prettyPhoto/default/sp
 div.pp_default .pp_content .ppt{color:#f8f8f8}
 div.pp_default .pp_content_container .pp_left{background:url(../images/prettyPhoto/default/sprite_y.png) -7px 0 repeat-y;padding-left:13px}
 div.pp_default .pp_content_container .pp_right{background:url(../images/prettyPhoto/default/sprite_y.png) top right repeat-y;padding-right:13px}
-div.pp_default .pp_next:hover{background:url(../images/prettyPhoto/default/sprite_next.png) center right no-repeat;cursor:pointer}
-div.pp_default .pp_previous:hover{background:url(../images/prettyPhoto/default/sprite_prev.png) center left no-repeat;cursor:pointer}
-div.pp_default .pp_back_gallery:hover{background:url(../images/prettyPhoto/default/sprite_back_gallery.png) center center no-repeat;cursor:pointer}
+div.pp_default .pp_next:hover{cursor:url(../images/prettyPhoto/default/sprite_next.png), auto;}
+div.pp_default .pp_previous:hover{cursor:url(../images/prettyPhoto/default/sprite_prev.png), auto;}
+div.pp_default .pp_back_gallery:hover{cursor:url(../images/prettyPhoto/default/sprite_back_gallery.png), auto;}
 div.pp_default .pp_expand{background:url(../images/prettyPhoto/default/sprite.png) 0 -29px no-repeat;cursor:pointer;height:28px;width:28px}
 div.pp_default .pp_expand:hover{background:url(../images/prettyPhoto/default/sprite.png) 0 -56px no-repeat;cursor:pointer}
 div.pp_default .pp_contract{background:url(../images/prettyPhoto/default/sprite.png) 0 -84px no-repeat;cursor:pointer;height:28px;width:28px}
