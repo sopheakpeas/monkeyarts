@@ -79,7 +79,7 @@ function sp_print_scripts_styles() {
 	
 	if(!is_admin()){
 		//CSS
-		//wp_enqueue_style('rokkitt', 'http://fonts.googleapis.com/css?family=Rokkitt:400,700', false, SP_THEME_VERSION);
+		wp_enqueue_style('rokkitt', 'http://fonts.googleapis.com/css?family=Rokkitt:400,700', false, SP_THEME_VERSION);
 		wp_enqueue_style('sp-theme-styles', SP_BASE_URL . 'style.css', false, SP_THEME_VERSION);
 		wp_enqueue_style('sp-base', SP_ASSETS_THEME . 'css/base.css', false, SP_THEME_VERSION);
 		wp_enqueue_style( 'flexslider', SP_ASSETS_THEME . 'css/flexslider.css', false, SP_THEME_VERSION);
