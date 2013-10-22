@@ -25,7 +25,7 @@
 	/* -------------------------------------------------- */
 	/*	Home slideshow
 	/* -------------------------------------------------- */
-	.slideshow{
+	.slideshow, .album-cover{
 		margin:0 auto;	
 		width:85%;
 	}
@@ -35,21 +35,46 @@
 	}
 	ul.bxslider{
 		margin:0;
-		padding:0;	
+		padding:0;
+		list-style: none;	
 	}
 	ul.bxslider .bx-caption{
 		background: #666\9;
-		background: rgba(80, 80, 80, 0.2);	
+		background: rgba(80, 80, 80, 0.0);
+		bottom: 15%;
+		left: auto;	
+		right: 8%;
+		width: auto;
+		padding: 2px 10px;
 	}
+		ul.bxslider li.top-right .bx-caption{
+			left:auto;
+			bottom: auto;
+			right: 8%;
+			top: 15%;
+		}
+		ul.bxslider li.bottom-left .bx-caption{
+			left:8%;
+			bottom: 15%;
+			right: auto;
+			top: auto;
+		}
+		ul.bxslider li.top-left .bx-caption{
+			left:8%;
+			bottom: auto;
+			right: auto;
+			top: 15%;
+		}
 	ul.bxslider .bx-caption span{
 		text-align:left;
 		font-family: 'Rokkitt', serif;
-		font-size:1.2em;	
+		font-size:26px;
+		text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
 	}
 	ul.bxslider .bx-caption p{
 		margin:0;	
 	}
-	
+
 	/* -------------------------------------------------- */
 	/*	Blog page
 	/* -------------------------------------------------- */
@@ -390,13 +415,20 @@ h1.entry-title, .section-title h3{
 }
 
 .entry-content{
-	padding-top:1em;
+	/*padding-top:1em;*/
 }
-.entry-content a{
+/*.entry-content a{
 	text-decoration:underline;
 }
 .entry-content a:hover{
 	text-decoration:none;
+}*/
+.entry-content ul{
+	margin-top: 0;
+}
+
+.entry-content strong{
+	color: #80573D;
 }
 
 /* Post Meta */
@@ -515,7 +547,7 @@ a.rss-cat-icon{
 * PORTFOLIO
 * Style photo albums
 * ------------------------------------------------------------ */
- 
+.album-cover:hover{cursor:url(../images/prettyPhoto/default/sprite_back_gallery.png), auto;}
 .portfolio {
 	z-index: 3;
 }
@@ -523,6 +555,8 @@ a.rss-cat-icon{
 .portfolio ul {
 	margin: 0 auto;
 	padding-left:0;
+	list-style: none;
+	overflow: hidden;
 }
 .portfolio li {
 	display: block;
@@ -744,9 +778,9 @@ a.rss-cat-icon{
 	}
 	
 /* Tiny Scrollbar */
-#scrollbar1 { width: 65.5%; margin: 60px 0 10px 40px; }
+#scrollbar1 { width: 85%; margin: 50px 0 10px 50px; }
 #scrollbar1 .viewport { width: 92.3%; height: 350px; overflow: hidden; position: relative; }
-#scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0; }
+#scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0; width: inherit; }
 #scrollbar1 .scrollbar{ background-color:#c9c9c9 ; position: relative; float: right; width: 6px; }
 #scrollbar1 .track { background-color:#c9c9c9; height: 100%; width:6px; position: relative; }
 #scrollbar1 .thumb { background-color:#80573d; height: 20px; width: 6px; cursor: pointer; overflow: hidden; position: absolute; top: 0; left: 0; }
@@ -757,6 +791,11 @@ a.rss-cat-icon{
 /*Spinner Style*/
 .spinner{
 	background-position:center center;	
+}
+
+/*Custom prettyPhoto*/
+div.pp_default .pp_nav .currentTextHolder{
+	color: #8b5e42!important;
 }
 	
 /* ---------------------------------------------------------------

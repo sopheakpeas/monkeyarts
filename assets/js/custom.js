@@ -135,6 +135,13 @@ jQuery( document ).ready( function($) {
 	  pause:5000,
 	  speed:4000
 	});
+
+	// portfolio hide cover album
+	$('.portfolio').hide();
+	$('.album-cover').click(function(){
+		$(this).hide();
+		$('.portfolio').show();
+	})
 																																	  
 })
 

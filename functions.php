@@ -57,7 +57,7 @@ require_once( SP_BASE_DIR . 'library/functions/theme-functions.php');
 //require_once( SP_BASE_DIR . 'library/functions/aq_resizer.php');
 
 // Add shortcodes
-//require_once( SP_BASE_DIR . 'library/shortcode/shortcodes.php');
+require_once( SP_BASE_DIR . 'library/shortcode/shortcodes.php');
 
 //Custom post type
 require_once( SP_BASE_DIR . 'library/custom-posts/custom-posts.php' );

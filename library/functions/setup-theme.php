@@ -62,9 +62,8 @@ function sp_theme_setup() {
 	// Add custom image sizes
 	add_image_size('blog-post-thumb', 270);
 	add_image_size('blog-post-detail', 380);
-	add_image_size('portfolio-thumb', 300, 200, TRUE);
 	add_image_size('portfolio-media', 940);
-	add_image_size( 'slideshow', 1350, 800, true );
+	add_image_size( 'slideshow', 1280, 800, true );
 	//add_image_size( 'slideshow', 1710, 1015, true );
 
 }

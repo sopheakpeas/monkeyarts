@@ -68,8 +68,8 @@ $meta_boxes[] = array(
 /* ---------------------------------------------------------------------- */
 
 $meta_boxes[] = array(
-	'id'       => 'spa-menu-price',
-	'title'    => __('Price', 'sptheme_admin'),
+	'id'       => 'portfolio-settings',
+	'title'    => __('Upload setting', 'sptheme_admin'),
 	'pages'    => array('portfolio'),
 	'context'  => 'normal',
 	'priority' => 'default',
@@ -79,7 +79,40 @@ $meta_boxes[] = array(
 			'id'   => $prefix . 'photo_albums',
 			'type' => 'image_advanced',
 			'max_file_uploads' => 50,
-			'desc' => __('e.g: upload photos for this album and each photos size is 1710px by 1015px', 'sptheme_admin'),
+			'desc' => __('e.g: upload photos for this album and each photos size is 1280px by 800px', 'sptheme_admin'),
+		)
+	)
+);
+
+/* ---------------------------------------------------------------------- */
+/*	Slideshow
+/* ---------------------------------------------------------------------- */
+
+$meta_boxes[] = array(
+	'id'       => 'slideshow-settings',
+	'title'    => __('Slide settings', 'sptheme_admin'),
+	'pages'    => array('slideshow'),
+	'context'  => 'normal',
+	'priority' => 'default',
+	'fields'   => array(
+		array(
+			'name' => __('Photo slides', 'sptheme_admin'),
+			'id'   => $prefix . 'photo_slides',
+			'type' => 'image_advanced',
+			'max_file_uploads' => 5,
+			'desc' => __('e.g: upload photos for homepage slideshow and each photos size is 1280px by 800px', 'sptheme_admin'),
+		),
+		array(
+			'name' => __('Caption position', 'sptheme_admin'),
+			'id'   => $prefix . 'caption_pos',
+			'type' => 'select',
+			'desc' => __('e.g: choose position of caption', 'sptheme_admin'),
+			'options' => array(
+				'bottom-right' => 'Bottom Right',
+				'top-right'         => 'Top Right',
+				'bottom-left' => 'Bottom Left',
+				'top-left' => 'Top Left',
+			),
 		)
 	)
 );

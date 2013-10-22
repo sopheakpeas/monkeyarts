@@ -46,7 +46,7 @@
 
 			$role     = 'post'; // page
 			$slug     = 'slideshow';
-			$supports = array('title', 'thumbnail'); // 'title', 'editor', 'thumbnail'
+			$supports = array('title'); // 'title', 'editor', 'thumbnail'
 
 			/*if ( $smof_data['sp_newsticker_revisions'] )
 				$supports[] = 'revisions';*/
@@ -122,8 +122,13 @@
 			switch ( $column ) {
 				
 				case $prefix."thumbnail":
-					$size = explode( 'x', SP_ADMIN_LIST_THUMB );
-					echo '<a href="' . get_edit_post_link( $post->ID ) . '">' . get_the_post_thumbnail( $post->ID, $size, array( 'title' => get_the_title( $post->ID ) ) ) . '</a>';
+					$slides = rwmb_meta('sp_photo_slides', array('type' => 'plupload_image', 'size' => 'thumbnail'));
+					$slide_index = 1;
+					foreach ( $slides as $image ){
+						if ($slide_index == 1)
+							echo '<a href="' . get_edit_post_link( $post->ID ) . '"><img src="' . $image['url'] . '" width="60" height="60" /></a>';
+						$slide_index++;
+					}
 				break;
 				
 				default:

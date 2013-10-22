@@ -11,6 +11,7 @@ Template Name: Under Construction
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 
 <title><?php wp_title( '|', true, 'right' ); ?></title>
+<link rel="shortcut icon" href="<?php echo ($smof_data['theme_favico'] == '') ? SP_BASE_URL.'favicon.ico' : $smof_data['theme_favico']; ?>" type="image/x-icon" />
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <style type="text/css">

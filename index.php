@@ -12,15 +12,20 @@ get_header(); ?>
         <?php 
         $args = array (
                     'post_type'		=> 'slideshow',
-                    'posts_per_page'	=> 5
+                    'posts_per_page'	=> 1
                 );
         $slide_query = new WP_Query($args);
         if ($slide_query->have_posts()) :
-			while ( $slide_query->have_posts() ) : $slide_query->the_post();		  
+			while ( $slide_query->have_posts() ) : $slide_query->the_post();
+
+            $slides = rwmb_meta('sp_photo_slides', array('type' => 'plupload_image', 'size' => 'slideshow'));		  
+            $cap_pos = get_post_meta( get_the_ID(), 'sp_caption_pos', true );
 		?>
-			<li>
-			<img src="<?php echo sp_post_thumbnail('slideshow');?>" title="<?php the_title(); ?>" />
+        <?php foreach ( $slides as $image ){ ?>
+			<li class="<?php echo $cap_pos; ?>">
+			<img src="<?php echo $image['url']; ?>" title="<?php the_title();?>" />
 			</li>
+        <?php } ?>    
 		<?php
 			endwhile;
         else: 

@@ -623,62 +623,6 @@ if ( ! function_exists( 'highlight_search_excerpt' ) ) :
 	}
 endif;
 
-/* ---------------------------------------------------------------------- */
-/*	Blog navigation
-/* ---------------------------------------------------------------------- */
-
-if ( !function_exists('sp_pagination') ) {
-
-	function sp_pagination( $pages = '', $range = 2 ) {
-
-		$showitems = ( $range * 2 ) + 1;
-
-		global $paged, $wp_query;
-
-		if( empty( $paged ) )
-			$paged = 1;
-
-		if( $pages == '' ) {
-
-			$pages = $wp_query->max_num_pages;
-
-			if( !$pages )
-				$pages = 1;
-
-		}
-
-		if( 1 != $pages ) {
-
-			$output = '<nav class="pagination">';
-
-			// if( $paged > 2 && $paged >= $range + 1 /*&& $showitems < $pages*/ )
-				// $output .= '<a href="' . get_pagenum_link( 1 ) . '" class="next">&laquo; ' . __('First', SP_TEXT_DOMAIN) . '</a>';
-
-			if( $paged > 1 /*&& $showitems < $pages*/ )
-				$output .= '<a href="' . get_pagenum_link( $paged - 1 ) . '" class="next">&larr; ' . __('Previous', SP_TEXT_DOMAIN) . '</a>';
-
-			for ( $i = 1; $i <= $pages; $i++ )  {
-
-				if ( 1 != $pages && ( !( $i >= $paged + $range + 1 || $i <= $paged - $range - 1) || $pages <= $showitems ) )
-					$output .= ( $paged == $i ) ? '<span class="current">' . $i . '</span>' : '<a href="' . get_pagenum_link( $i ) . '">' . $i . '</a>';
-
-			}
-
-			if ( $paged < $pages /*&& $showitems < $pages*/ )
-				$output .= '<a href="' . get_pagenum_link( $paged + 1 ) . '" class="prev">' . __('Next', SP_TEXT_DOMAIN) . ' &rarr;</a>';
-
-			// if ( $paged < $pages - 1 && $paged + $range - 1 <= $pages /*&& $showitems < $pages*/ )
-				// $output .= '<a href="' . get_pagenum_link( $pages ) . '" class="prev">' . __('Last', SP_TEXT_DOMAIN) . ' &raquo;</a>';
-
-			$output .= '</nav>';
-
-			return $output;
-
-		}
-
-	}
-
-}
 
 /* ---------------------------------------------------------------------- */
 /*	Social
