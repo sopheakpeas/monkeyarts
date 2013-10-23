@@ -63,7 +63,7 @@ function sp_theme_setup() {
 	add_image_size('blog-post-thumb', 270);
 	add_image_size('blog-post-detail', 380);
 	add_image_size('portfolio-media', 940);
-	add_image_size( 'slideshow', 1280, 800, true );
+	add_image_size( 'slideshow', 960, 640, true );
 	//add_image_size( 'slideshow', 1710, 1015, true );
 
 }

@@ -130,7 +130,7 @@ jQuery( document ).ready( function($) {
 	  captions: true,
 	  pager: false,
 	  captions: true,
-	  auto:true,
+	  auto:false,
 	  autoHover: true,
 	  pause:5000,
 	  speed:4000
@@ -141,9 +141,18 @@ jQuery( document ).ready( function($) {
 	$('.album-cover').click(function(){
 		$(this).hide();
 		$('.portfolio').show();
-	})
-																																	  
+	})																														  
 })
+
+window.onresize = function() {
+	var wrapper = jQuery('#wrapper').width();
+	var main = jQuery('#main');
+	var img_slide = jQuery('.slideshow .bx-wrapper img').width();
+	var cover_width = jQuery('.album-cover img').width();
+	var sidebar = 280;
+	main.css({'width':'auto'});
+	main.width(wrapper - sidebar);
+}
 
 function loadpage(file){
 	jQuery('#main').empty();

@@ -26,12 +26,13 @@
 	/*	Home slideshow
 	/* -------------------------------------------------- */
 	.slideshow, .album-cover{
-		margin:0 auto;	
-		width:85%;
+		margin:0 auto 10px;
+		width: 85%;	
 	}
 	.slideshow .bx-wrapper .bx-viewport{
 		box-shadow:none;
 		border:none;	
+		left: 0;
 	}
 	ul.bxslider{
 		margin:0;
@@ -778,8 +779,8 @@ a.rss-cat-icon{
 	}
 	
 /* Tiny Scrollbar */
-#scrollbar1 { width: 85%; margin: 50px 0 10px 50px; }
-#scrollbar1 .viewport { width: 92.3%; height: 350px; overflow: hidden; position: relative; }
+#scrollbar1 { width: 87%; margin: 50px auto 10px }
+#scrollbar1 .viewport { width: 96.3%; height: 350px; overflow: hidden; position: relative; }
 #scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0; width: inherit; }
 #scrollbar1 .scrollbar{ background-color:#c9c9c9 ; position: relative; float: right; width: 6px; }
 #scrollbar1 .track { background-color:#c9c9c9; height: 100%; width:6px; position: relative; }
@@ -817,14 +818,22 @@ div.pp_default .pp_nav .currentTextHolder{
 		background-color:#666;
 	}
 	.slideshow{
-		width:470px;
+		width:100%;
 		margin:0 auto;	
 	}
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width: 480px) and (max-width:790px) {
    #main{
-		width:25%;
+		width:32%;
 		background-color:#090;
+	}
+
+	.slideshow{
+		width:100%;
+		margin:0 auto;	
+	}
+	.slideshow .bx-caption{
+		visibility: hidden;
 	}
 }*/
