@@ -140,6 +140,7 @@ jQuery( document ).ready( function($) {
 	$('.portfolio').hide();
 	$('.album-cover').click(function(){
 		$(this).hide();
+		$('.portfolio').css({'visibility':'visible'});
 		$('.portfolio').show();
 	})																														  
 })

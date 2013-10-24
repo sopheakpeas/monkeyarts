@@ -78,7 +78,7 @@ $meta_boxes[] = array(
 			'name' => __('Photo albums', 'sptheme_admin'),
 			'id'   => $prefix . 'photo_albums',
 			'type' => 'image_advanced',
-			'max_file_uploads' => 50,
+			'max_file_uploads' => 90,
 			'desc' => __('e.g: upload photos for this album and each photos size is 1280px by 800px', 'sptheme_admin'),
 		)
 	)

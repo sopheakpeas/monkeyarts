@@ -551,6 +551,7 @@ a.rss-cat-icon{
 .album-cover:hover{cursor:url(../images/prettyPhoto/default/sprite_back_gallery.png), auto;}
 .portfolio {
 	z-index: 3;
+	visibility: hidden;
 }
 
 .portfolio ul {
