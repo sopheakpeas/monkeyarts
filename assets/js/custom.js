@@ -130,7 +130,7 @@ jQuery( document ).ready( function($) {
 	  captions: true,
 	  pager: false,
 	  captions: true,
-	  auto:false,
+	  auto:true,
 	  autoHover: true,
 	  pause:5000,
 	  speed:4000
@@ -146,12 +146,10 @@ jQuery( document ).ready( function($) {
 
 window.onresize = function() {
 	var wrapper = jQuery('#wrapper').width();
-	var main = jQuery('#main');
-	var img_slide = jQuery('.slideshow .bx-wrapper img').width();
-	var cover_width = jQuery('.album-cover img').width();
 	var sidebar = 280;
-	main.css({'width':'auto'});
-	main.width(wrapper - sidebar);
+	jQuery('#main').css({'width':'auto'});
+	jQuery('#main').width(wrapper - sidebar);
+	jQuery('.album-cover').width(wrapper - sidebar);
 }
 
 function loadpage(file){
