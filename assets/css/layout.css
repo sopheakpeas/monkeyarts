@@ -430,7 +430,7 @@ h1.entry-title, .section-title h3{
 	margin-top: 0;
 }
 
-.entry-content strong{
+.entry-content strong, .entry-content b{
 	color: #80573D;
 }
 
