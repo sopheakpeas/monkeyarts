@@ -26,8 +26,10 @@
 	/*	Home slideshow
 	/* -------------------------------------------------- */
 	.slideshow, .album-cover{
-		margin:0 auto 10px;
-		width: 85%;	
+		/*margin:0 auto 10px;*/
+		margin-bottom: 10px;
+		margin-left: 7%;
+		width: 76%;	
 	}
 	.slideshow .bx-wrapper .bx-viewport{
 		box-shadow:none;
@@ -120,7 +122,7 @@
  
 	.nav-menu ul{left:-9999px; margin-bottom:10px; margin-top:10px; display:none; padding-left:0;}
 	.nav-menu ul li{line-height:20px;margin-bottom:5px;}
-	.nav-menu ul a{white-space:nowrap;display:block; font-size:15px; color:#a2806d; padding-left:8px;}
+	.nav-menu ul a{white-space:nowrap;display:block; font-size:15px; color:#906245; padding-left:8px;}
 	
 	.nav-menu ul li a:hover, .nav-menu ul li a.active{
 		background:url(../images/arrow_orange.png) 0 6px no-repeat;
@@ -780,7 +782,7 @@ a.rss-cat-icon{
 	}
 	
 /* Tiny Scrollbar */
-#scrollbar1 { width: 87%; margin: 50px auto 10px }
+#scrollbar1 { width: 76%; margin: 50px 0 10px 6.7% }
 #scrollbar1 .viewport { width: 96.3%; height: 350px; overflow: hidden; position: relative; }
 #scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0; width: inherit; }
 #scrollbar1 .scrollbar{ background-color:#c9c9c9 ; position: relative; float: right; width: 6px; }

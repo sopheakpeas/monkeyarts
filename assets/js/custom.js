@@ -150,7 +150,6 @@ window.onresize = function() {
 	var sidebar = 280;
 	jQuery('#main').css({'width':'auto'});
 	jQuery('#main').width(wrapper - sidebar);
-	jQuery('.album-cover').width(wrapper - sidebar);
 }
 
 function loadpage(file){

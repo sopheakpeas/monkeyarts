@@ -79,7 +79,7 @@ $meta_boxes[] = array(
 			'id'   => $prefix . 'photo_albums',
 			'type' => 'image_advanced',
 			'max_file_uploads' => 90,
-			'desc' => __('e.g: upload photos for this album and each photos size is 1280px by 800px', 'sptheme_admin'),
+			'desc' => __('e.g: upload photos for this album and each photos size is 960px by 640px', 'sptheme_admin'),
 		)
 	)
 );
@@ -100,7 +100,7 @@ $meta_boxes[] = array(
 			'id'   => $prefix . 'photo_slides',
 			'type' => 'image_advanced',
 			'max_file_uploads' => 5,
-			'desc' => __('e.g: upload photos for homepage slideshow and each photos size is 1280px by 800px', 'sptheme_admin'),
+			'desc' => __('e.g: upload photos for homepage slideshow and each photos size is 960px by 640px', 'sptheme_admin'),
 		),
 		array(
 			'name' => __('Caption position', 'sptheme_admin'),
