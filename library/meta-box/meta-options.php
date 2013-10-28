@@ -20,6 +20,26 @@ global $meta_boxes, $sidebars;
 $meta_boxes = array();
 		
 
+/* ---------------------------------------------------------------------- */
+/*	General Page
+/* ---------------------------------------------------------------------- */
+
+$meta_boxes[] = array(
+	'id'       => 'page-settings',
+	'title'    => __('Page Settings', 'sptheme_admin'),
+	'pages'    => array('page'),
+	'context'  => 'normal',
+	'priority' => 'high',
+	'fields'   => array(
+		array(
+			'name' => __('Show page title', 'sptheme_admin'),
+			'id'   => $prefix . 'is_page_title',
+			'type' => 'checkbox',
+			'std'  => 1,
+			'desc' => __('show and hide page title.(default is show)', 'sptheme_admin'),
+		)
+	)
+);
 
 /* ---------------------------------------------------------------------- */
 /*	POST FORMAT: VIDEO
@@ -78,7 +98,7 @@ $meta_boxes[] = array(
 			'name' => __('Photo albums', 'sptheme_admin'),
 			'id'   => $prefix . 'photo_albums',
 			'type' => 'image_advanced',
-			'max_file_uploads' => 90,
+			'max_file_uploads' => 100,
 			'desc' => __('e.g: upload photos for this album and each photos size is 960px by 640px', 'sptheme_admin'),
 		)
 	)

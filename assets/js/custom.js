@@ -20,6 +20,8 @@ var pageAjax = true;
 
 // document.ready call
 jQuery( document ).ready( function($) {
+
+	resizeMainContent();
 	
 	if ( $('.nav-menu li').hasClass("current-menu-parent") ){
 		$('.nav-menu li.current-menu-parent a').addClass('active');
@@ -142,10 +144,14 @@ jQuery( document ).ready( function($) {
 		$(this).hide();
 		$('.portfolio').css({'visibility':'visible'});
 		$('.portfolio').show();
-	})																														  
+	})																															  
 })
 
 window.onresize = function() {
+	resizeMainContent();
+}
+
+function resizeMainContent(){
 	var wrapper = jQuery('#wrapper').width();
 	var sidebar = 280;
 	jQuery('#main').css({'width':'auto'});

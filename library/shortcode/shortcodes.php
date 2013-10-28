@@ -26,7 +26,7 @@ function register_shortcodes_button( $buttons ) {
 	//array_push( $buttons, "highlight", "notifications", "buttons", "divider", "toggle", "tabs", "accordian", "dropcaps", "video", "soundcloud", "columns" );
 	if ( (get_post_type() == 'page') || (get_post_type() == 'post') )
 	{
-		array_push( $buttons, "video", "soundcloud", "columns" );	
+		array_push( $buttons, "video", "soundcloud", "font-size", "columns" );	
 	}
     return $buttons;
 }
@@ -259,6 +259,19 @@ function soundcloud_sc( $atts, $content = null ) {
 	return $output;
 }
 add_shortcode('spsoundcloud', 'soundcloud_sc');
+
+//Font size
+function font_size_sc( $atts, $content = null ) {
+    
+	extract( shortcode_atts( array(
+			'font_size' => '16'
+		), $atts ) );	
+		
+	$output = '<span style="font-size:' . $font_size . 'px;">' . $content . '</span>';
+	
+	return $output;
+}
+add_shortcode('fontsize', 'font_size_sc');
 
 //Portfolio Grid
 function portfolio_grid_sc( $atts, $content = null ) {

@@ -171,6 +171,23 @@
                cmd : 'portfolio-grid',
                image:  url +  "../../img/ed_portfolio.png"
             });
+            
+            //Font size
+			ed.addCommand('font-size', function() {
+				ed.windowManager.open({
+					file : url +  '../../shortcodes/font-size.php'+sp_wpml_lang,
+					width : 350,
+					height : 160,
+					inline : 1
+				});
+			
+			});
+						
+			ed.addButton('font-size', {
+            title : 'Font Size',
+               cmd : 'font-size',
+               image:  url +  "../../img/ed_font_size.png"
+            });
 			
         },
 		createControl:function(d,e,url) {
@@ -188,11 +205,11 @@
 						a.addImmediate(b,"Column 1/2", ' [two_fourth]  [/two_fourth] ');
 						a.addImmediate(b,"Column 1/2 last", ' [two_fourth_last]  [/two_fourth_last] ');
 						a.addImmediate(b,"Column 1/3", ' [one_third]  [/one_third] ');
-						a.addImmediate(b,"Column 1/3 last", ' [one_third last=last]  [/one_third] ');
+						a.addImmediate(b,"Column 1/3 last", ' [one_third_last]  [/one_third] ');
 						a.addImmediate(b,"Column 1/4", ' [one_fourth]  [/one_fourth] ');
 						a.addImmediate(b,"Column 1/4 last", ' [one_fourth_last]  [/one_fourth_last] ');
 						a.addImmediate(b,"Column 2/3", ' [two_third]  [/two_third] ');
-						a.addImmediate(b,"Column 2/3 last", ' [two_third last=last]  [/two_third] ');
+						a.addImmediate(b,"Column 2/3 last", ' [two_third_last]  [/two_third_last] ');
 						a.addImmediate(b,"Column 3/4", ' [three_fourth]  [/three_fourth] ');
 						a.addImmediate(b,"Column 3/4 last", ' [three_fourth_last]  [/three_fourth_last] ');								
 						

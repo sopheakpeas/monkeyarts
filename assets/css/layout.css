@@ -71,7 +71,7 @@
 	ul.bxslider .bx-caption span{
 		text-align:left;
 		font-family: 'Rokkitt', serif;
-		font-size:26px;
+		font-size:32px;
 		text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
 	}
 	ul.bxslider .bx-caption p{
@@ -428,6 +428,8 @@ h1.entry-title, .section-title h3{
 }*/
 .entry-content ul{
 	margin-top: 0;
+	margin-bottom: 15px;
+	list-style: square inside none;
 }
 
 .entry-content strong, .entry-content b{
@@ -503,6 +505,12 @@ a.rss-cat-icon{
 }
 .blog-classic article:first-child{
 	margin-top:0;
+}
+
+.single-post .entry-content,
+.archive .entry-content,
+.category .entry-content{
+	margin-top: 15px;
 }
 
 /* ---------------------------------------------------------------
@@ -783,7 +791,7 @@ a.rss-cat-icon{
 	
 /* Tiny Scrollbar */
 #scrollbar1 { width: 76%; margin: 50px 0 10px 6.7% }
-#scrollbar1 .viewport { width: 96.3%; height: 350px; overflow: hidden; position: relative; }
+#scrollbar1 .viewport { width: 96.3%; height: 380px; overflow: hidden; position: relative; }
 #scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0; width: inherit; }
 #scrollbar1 .scrollbar{ background-color:#c9c9c9 ; position: relative; float: right; width: 6px; }
 #scrollbar1 .track { background-color:#c9c9c9; height: 100%; width:6px; position: relative; }

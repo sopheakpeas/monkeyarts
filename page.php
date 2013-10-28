@@ -20,9 +20,12 @@ if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']))
                 <div class="overview">
                 
                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                <?php $is_page_title = get_post_meta( $post->ID, 'sp_is_page_title', true );?>
+                <?php if ($is_page_title){ ?>
                 <header class="entry-header">
                     <h1 class="entry-title"><?php the_title(); ?></h1>
                 </header>
+                <?php } ?>
                     <div class="entry-content">
                         <?php the_content(); ?>
                     </div><!-- .entry-content -->
